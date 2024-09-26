@@ -40,7 +40,7 @@ public class BookingController {
     }
 
     @PostMapping("/event")
-    public ResponseEntity<Event> createUser(@RequestBody Event event) {
+    public ResponseEntity<Event> createEvent(@RequestBody Event event) {
         eventService.addEvent(event);
         return new ResponseEntity<>(event, HttpStatus.CREATED);
     }
@@ -52,7 +52,7 @@ public class BookingController {
     }
 
     @PostMapping("/ticket")
-    public ResponseEntity<Ticket> createUser(@RequestBody Ticket ticket) {
+    public ResponseEntity<Ticket> createTicket(@RequestBody Ticket ticket) {
         ticketService.addTicket(ticket);
         return new ResponseEntity<>(ticket, HttpStatus.CREATED);
     }

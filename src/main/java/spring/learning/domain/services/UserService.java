@@ -7,7 +7,7 @@ import spring.learning.domain.entities.User;
 public class UserService {
 
     public void addUser(User user){
-        System.out.println("adding User " + user.getName());
+        System.out.println("adding User 2" + user.getName());
     }
 
 }

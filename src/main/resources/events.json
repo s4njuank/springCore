@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Spring Boot Workshop"
+  },
+  {
+    "id": 2,
+    "name": "Java Conference"
+  },
+  {
+    "id": 3,
+    "name": "Microservices Webinar"
+  }
+]

@@ -14,6 +14,13 @@ public class User {
     public User() {
     }
 
+    public User(Integer id, String name, Ticket ticket, Event event) {
+        this.id = id;
+        this.name = name;
+        this.ticket = ticket;
+        this.event = event;
+    }
+
     public Integer getId() {
         return id;
     }

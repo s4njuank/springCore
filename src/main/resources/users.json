@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "ticket": {
+      "id": 1,
+      "name": "VIP Ticket"
+    },
+    "event": {
+      "id": 1,
+      "name": "Spring Boot Conference"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "ticket": {
+      "id": 2,
+      "name": "Regular Ticket"
+    },
+    "event": {
+      "id": 2,
+      "name": "Java Developer Summit"
+    }
+  }
+]

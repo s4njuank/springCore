@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "VIP Ticket"
+  },
+  {
+    "id": 2,
+    "name": "Regular Ticket"
+  },
+  {
+    "id": 3,
+    "name": "Student Ticket"
+  }
+]

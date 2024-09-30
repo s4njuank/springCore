@@ -11,9 +11,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import spring.learning.domain.entities.Event;
 import spring.learning.domain.entities.Ticket;
 import spring.learning.domain.entities.User;
-import spring.learning.domain.services.EventService;
-import spring.learning.domain.services.TicketService;
-import spring.learning.domain.services.UserService;
+import spring.learning.domain.services.EventServiceImpl;
+import spring.learning.domain.services.TicketServiceImpl;
+import spring.learning.domain.services.UserServiceImpl;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -29,13 +29,13 @@ public class BookingControllerFullIntegrationTest {
     private ObjectMapper objectMapper;
 
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
     @Autowired
-    private EventService eventService;
+    private EventServiceImpl eventService;
 
     @Autowired
-    private TicketService ticketService;
+    private TicketServiceImpl ticketService;
 
     private User user;
     private Event event;

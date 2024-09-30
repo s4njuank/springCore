@@ -12,9 +12,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import spring.learning.domain.entities.Event;
 import spring.learning.domain.entities.Ticket;
 import spring.learning.domain.entities.User;
-import spring.learning.domain.services.EventService;
-import spring.learning.domain.services.TicketService;
-import spring.learning.domain.services.UserService;
+import spring.learning.domain.services.EventServiceImpl;
+import spring.learning.domain.services.TicketServiceImpl;
+import spring.learning.domain.services.UserServiceImpl;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -28,13 +28,13 @@ public class BookingControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private UserService userService;
+    private UserServiceImpl userServiceImpl;
 
     @MockBean
-    private EventService eventService;
+    private EventServiceImpl eventServiceImpl;
 
     @MockBean
-    private TicketService ticketService;
+    private TicketServiceImpl ticketServiceImpl;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -63,7 +63,7 @@ public class BookingControllerTest {
 
     @Test
     public void getUser_shouldReturnUserById() throws Exception {
-        when(userService.getUser(1)).thenReturn(user);
+        when(userServiceImpl.getUser(1)).thenReturn(user);
 
         mockMvc.perform(get("/user/1")
                         .contentType(MediaType.APPLICATION_JSON))
@@ -85,7 +85,7 @@ public class BookingControllerTest {
 
     @Test
     public void getEvent_shouldReturnEventById() throws Exception {
-        when(eventService.getEvent(1)).thenReturn(event);
+        when(eventServiceImpl.getEvent(1)).thenReturn(event);
 
         mockMvc.perform(get("/event/1")
                         .contentType(MediaType.APPLICATION_JSON))
@@ -107,7 +107,7 @@ public class BookingControllerTest {
 
     @Test
     public void getTicket_shouldReturnTicketById() throws Exception {
-        when(ticketService.getTicket(1)).thenReturn(ticket);
+        when(ticketServiceImpl.getTicket(1)).thenReturn(ticket);
 
         mockMvc.perform(get("/ticket/1")
                         .contentType(MediaType.APPLICATION_JSON))

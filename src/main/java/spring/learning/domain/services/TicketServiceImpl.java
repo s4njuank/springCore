@@ -3,27 +3,26 @@ package spring.learning.domain.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spring.learning.domain.entities.Ticket;
-import spring.learning.domain.entities.User;
-import spring.learning.domain.repositories.TicketRepository;
+import spring.learning.ports.controllers.repositories.TicketRepositoryImpl;
 
 @Service
-public class TicketService {
+public class TicketServiceImpl {
 
-    private TicketRepository ticketRepository;
+    private TicketRepositoryImpl ticketRepositoryImpl;
 
     @Autowired
-    public TicketService(TicketRepository ticketRepository) {
-        this.ticketRepository = ticketRepository;
+    public TicketServiceImpl(TicketRepositoryImpl ticketRepositoryImpl) {
+        this.ticketRepositoryImpl = ticketRepositoryImpl;
     }
 
     public void addTicket(Ticket ticket){
         System.out.println("adding ticket " + ticket.getName());
-        ticketRepository.addTicket(ticket);
+        ticketRepositoryImpl.addTicket(ticket);
     }
 
     public Ticket getTicket(Integer ticketId){
         System.out.println("Getting ticket " + ticketId);
-        return ticketRepository.getTicket(ticketId);
+        return ticketRepositoryImpl.getTicket(ticketId);
     }
 
 }

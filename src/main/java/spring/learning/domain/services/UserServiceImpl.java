@@ -3,26 +3,26 @@ package spring.learning.domain.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spring.learning.domain.entities.User;
-import spring.learning.domain.repositories.UserRepository;
+import spring.learning.ports.controllers.repositories.UserRepositoryImpl;
 
 @Service
-public class UserService {
+public class UserServiceImpl {
 
-    private UserRepository userRepository;
+    private UserRepositoryImpl userRepositoryImpl;
 
     @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserServiceImpl(UserRepositoryImpl userRepositoryImpl) {
+        this.userRepositoryImpl = userRepositoryImpl;
     }
 
     public void addUser(User user){
         System.out.println("Adding User " + user.getName());
-        userRepository.addUser(user);
+        userRepositoryImpl.addUser(user);
     }
 
     public User getUser(Integer userId){
         System.out.println("Getting User " + userId);
-        return userRepository.getUser(userId);
+        return userRepositoryImpl.getUser(userId);
     }
 
 }
